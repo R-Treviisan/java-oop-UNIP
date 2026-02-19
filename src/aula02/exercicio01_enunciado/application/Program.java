@@ -1,4 +1,4 @@
-package aula02.exercicio01_enunciado.application;
+package exercicio01_enunciado.application;
 
 import java.util.Scanner;
 

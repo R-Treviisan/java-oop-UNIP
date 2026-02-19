@@ -1,4 +1,4 @@
-package aula02.exercicio01_completo.entities;
+package exercicio01_completo.entities;
 
 public class Pagamento {
 

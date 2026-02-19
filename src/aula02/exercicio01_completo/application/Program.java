@@ -1,6 +1,6 @@
-package aula02.exercicio01_completo.application;
+package exercicio01_completo.application;
 
-import aula02.exercicio01_completo.entities.Pagamento;
+import exercicio01_completo.entities.Pagamento;
 
 import java.util.Scanner;
 
