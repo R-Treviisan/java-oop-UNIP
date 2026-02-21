@@ -20,10 +20,15 @@ Organização em pacotes
 📂 Estrutura do Projeto
 aula03
 │
+
 ├── exercicio1_enunciado
+
 ├── exercicio1_completo
+
 │
+
 ├── exercicio2_enunciado
+
 └── exercicio2_completo
 
 🔹 exercicio1_enunciado
