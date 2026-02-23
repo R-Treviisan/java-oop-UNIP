@@ -27,39 +27,47 @@ public class Program {
         System.out.println("---- CADASTRO NOTAS ----");
 
         int contador = 1;
+        float nota = 0;
 
         while (contador <= 4) {
-            System.out.print("Digite a " + contador + "° nota: ");
-            float nota = sc.nextFloat();
-            if (nota <= 5) {
-                if (contador == 1) {
-                    nota1 = nota;
-                    contador++;
-                } else if (contador == 2) {
-                    nota2 = nota;
-                    contador++;
-                } else if (contador == 3) {
-                    nota3 = nota;
-                    contador++;
-                } else {
-                    nota4 = nota;
-                    contador++;
+
+            do {
+                System.out.println("Digite uma nota entre 0 e 5");
+                System.out.print("Digite a " + contador + "º nota: ");
+                nota = sc.nextInt();
+                if (nota < 0 || nota > 5) {
+                    System.out.println("Nota fora do intervalo");
                 }
 
-            } else {
-                System.out.println("Digite a nota entre 0 e 5:");
+            } while (nota < 0 || nota > 5);
 
+            if (contador == 1) {
+                nota1 = nota;
             }
+            if (contador == 2) {
+                nota2 = nota;
+            }
+            if (contador == 3) {
+                nota3 = nota;
+            }
+            if (contador == 4) {
+                nota4 = nota;
+            }
+            contador++;
         }
-
         media = Math.round((nota1 + nota2 + nota3 + nota4) / 4);
 
-
+        /*System.out.println(nota1);
+        System.out.println(nota2);
+        System.out.println(nota3);
+        System.out.println(nota4);*/
     }
+
+
 
     public void imprimeAluno() {
 
-        switch (media) {
+       switch (media) {
 
             case 0:
                 System.out.println("---- DADOS DO ALUNO ----");
