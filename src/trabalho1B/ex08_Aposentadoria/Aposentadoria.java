@@ -11,10 +11,9 @@
 // 'Não requerer aposentadoria'.
 
 
-package trabalho1B.Aposentadoria_08;
+package trabalho1B.ex08_Aposentadoria;
 
 import java.time.LocalDate;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Aposentadoria {

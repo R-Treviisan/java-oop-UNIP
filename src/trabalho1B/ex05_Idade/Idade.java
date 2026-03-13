@@ -3,7 +3,7 @@
 // Considerar ano com 365 dias e mês com 30 dias.*\\
 
 
-package trabalho1B.Idade_05;
+package trabalho1B.ex05_Idade;
 
 import java.util.Scanner;
 

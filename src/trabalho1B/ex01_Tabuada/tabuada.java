@@ -1,7 +1,7 @@
 
 //*Faça uma classe que entre com um número inteiro e imprima sua tabuada.*//
 
-package trabalho1B.Tabuada_01;
+package trabalho1B.ex01_Tabuada;
 
 import java.util.Scanner;
 

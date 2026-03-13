@@ -9,9 +9,8 @@
 // e o preço do litro do etanol é R$ 3,79.
 
 
-package trabalho1B.Posto_10;
+package trabalho1B.ex10_Posto;
 
-import java.lang.classfile.instruction.SwitchCase;
 import java.util.Scanner;
 
 public class Posto {

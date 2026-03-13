@@ -3,7 +3,7 @@
 // Calcular e imprimir de acordo com a tabela abaixo:
 
 
-package trabalho1B.Municipio_06;
+package trabalho1B.ex06_Municipio;
 
 import java.util.Scanner;
 

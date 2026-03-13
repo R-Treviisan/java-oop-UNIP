@@ -1,7 +1,7 @@
 
 //*Faça uma classe que leia um número inteiro e imprima os 50 números anteriores e os 50 números posteriores.*//
 
-package trabalho1B.Contagem_02;
+package trabalho1B.ex02_Contagem;
 
 import java.util.Scanner;
 

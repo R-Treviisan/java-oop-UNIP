@@ -7,7 +7,7 @@
 // Se quantidade > 10 o desconto será de 5%
 
 
-package trabalho1B.VendaProduto_09;
+package trabalho1B.ex09_VendaProduto;
 
 import java.util.Scanner;
 

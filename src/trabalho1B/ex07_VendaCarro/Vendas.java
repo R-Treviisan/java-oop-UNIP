@@ -7,7 +7,7 @@
 // Calcule e escreva o salário final do vendedor.
 
 
-package trabalho1B.VendaCarro_07;
+package trabalho1B.ex07_VendaCarro;
 
 import java.util.Scanner;
 

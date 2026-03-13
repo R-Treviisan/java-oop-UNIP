@@ -1,7 +1,7 @@
 //*Faça uma classe que receba três números com decimais e imprima o maior deles.*//
 
 
-package trabalho1B.MaiorDecimal_03;
+package trabalho1B.ex03_MaiorDecimal;
 
 import java.util.Scanner;
 

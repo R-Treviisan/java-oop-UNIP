@@ -1,7 +1,7 @@
 //*Faça uma classe que receba três números com decimais e imprima o menor deles.*//
 
 
-package trabalho1B.MenorDecimal_04;
+package trabalho1B.ex04_MenorDecimal;
 
 import java.util.Scanner;
 
