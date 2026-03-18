@@ -32,6 +32,8 @@ public class Decimais {
 
         }
 
+        System.out.println("");
+        System.out.println("---------------------------------------------");
         System.out.println("O numero maior foi " + num);
 
 

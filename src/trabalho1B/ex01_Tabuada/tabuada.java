@@ -10,7 +10,7 @@ public class tabuada {
         Scanner sc = new Scanner(System.in);
 
 
-        System.out.print("Qual a tabudaquer ver?");
+        System.out.print("Qual a tabudaquer ver? ");
         int n = sc.nextInt();
 
         for (int i=0; i <= 10; i++){

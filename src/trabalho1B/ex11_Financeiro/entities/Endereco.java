@@ -1,9 +1,11 @@
 package trabalho1B.ex11_Financeiro.entities;
 
+import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
+
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class Endereco implements Serializable {
+public class Endereco implements InterfaceCadastro {
     private String logadouro;
     private String numero;
     private String complemento;
@@ -12,8 +14,8 @@ public class Endereco implements Serializable {
     private String estado;
     private int cep; // PERGUNTAR SE POSSO TROCAR PARA STRING
 
+    @Override
     public void entrar() {
-        Scanner leia = new Scanner(System.in);
 
         System.out.print("Logadouro: ");
         logadouro = leia.nextLine();
@@ -40,6 +42,7 @@ public class Endereco implements Serializable {
 
     }
 
+    @Override
     public void imprimir() {
         System.out.println("Logadouro: " + logadouro);
         System.out.println("Numero: " + numero);

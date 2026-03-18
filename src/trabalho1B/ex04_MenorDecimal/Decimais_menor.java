@@ -30,7 +30,8 @@ public class Decimais_menor {
 
 
         }
-
+        System.out.println("");
+        System.out.println("---------------------------------------------");
         System.out.println("O numero menor foi " + num);
 
 

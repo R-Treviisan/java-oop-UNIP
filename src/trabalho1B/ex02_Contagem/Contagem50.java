@@ -1,5 +1,6 @@
 
-//*Faça uma classe que leia um número inteiro e imprima os 50 números anteriores e os 50 números posteriores.*//
+//*Faça uma classe que leia um número inteiro e imprima
+// os 50 números anteriores e os 50 números posteriores.*//
 
 package trabalho1B.ex02_Contagem;
 
@@ -15,7 +16,7 @@ public class Contagem50 {
 
         for (int i = -50; i <= 50; i++ ){
 
-            System.out.print(n+i + ", ");
+            System.out.println(n+i);
 
         }
 

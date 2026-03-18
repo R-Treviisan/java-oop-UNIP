@@ -1,10 +1,13 @@
 package trabalho1B.ex11_Financeiro.entities;
 
-public class Cliente extends PessoaJuridica {
+
+import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
+
+public class Cliente extends PessoaJuridica implements InterfaceCadastro {
     private double limite_credito;
     private Endereco endereco_cobranca;
 
-
+    @Override
     public void entrar() {
 
         System.out.print("Limite de Credito: ");
@@ -17,7 +20,7 @@ public class Cliente extends PessoaJuridica {
 
     }
 
-
+    @Override
     public void imprimir() {
         super.imprimir();
 
