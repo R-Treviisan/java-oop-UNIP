@@ -1,18 +1,19 @@
 package trabalho1B.ex11_Financeiro.entities;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Telefone {
+public class Telefone implements Serializable {
     private int ddd;
     private long numero;
 
     public void entrar(){
         Scanner leia = new Scanner(System.in);
 
-        System.out.println("DDD: ");
+        System.out.print("DDD: ");
         ddd = leia.nextInt();
 
-        System.out.println("Numero: ");
+        System.out.print("Numero: ");
         numero = leia.nextLong();
 
     }

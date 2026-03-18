@@ -10,13 +10,13 @@ public class PessoaFisica extends Pessoa {
         super.entrar();
 
         System.out.println("Dados do Pessoa Fisica");
-        System.out.println("CPF: ");
+        System.out.print("CPF: ");
         cpf = leia.nextLine();
 
-        System.out.println("RG: ");
+        System.out.print("RG: ");
         rg = leia.nextLine();
 
-        System.out.println("Emissor: ");
+        System.out.print("Emissor: ");
         emissor = leia.nextLine();
     }
 

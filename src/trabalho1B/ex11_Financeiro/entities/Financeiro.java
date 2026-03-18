@@ -2,7 +2,12 @@ package trabalho1B.ex11_Financeiro.entities;
 
 import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
 
-public class Financeiro implements InterfaceCadastro {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Financeiro implements InterfaceCadastro, Serializable {
+    ArrayList <Financeiro>listFinancas = new ArrayList<>();
+
     private int id;
     private int numero;
     private String emissao;
@@ -16,34 +21,34 @@ public class Financeiro implements InterfaceCadastro {
 
     public void entrar(){
 
-        System.out.println("ID: ");
+        System.out.print("ID: ");
         id = leia.nextInt();
 
-        System.out.println("Numero: ");
+        System.out.print("Numero: ");
         numero = leia.nextInt();
 
-        System.out.println("Emissao: ");
+        System.out.print("Emissao: ");
         emissao = leia.next();
 
-        System.out.println("Vencimento: ");
+        System.out.print("Vencimento: ");
         vencimento = leia.next();
 
-        System.out.println("Pagamento: ");
+        System.out.print("Pagamento: ");
         pagamento = leia.next();
 
-        System.out.println("Valor: ");
+        System.out.print("Valor: ");
         valor = leia.nextDouble();
 
-        System.out.println("Juros: ");
+        System.out.print("Juros: ");
         juros = leia.nextDouble();
 
-        System.out.println("Multa: ");
+        System.out.print("Multa: ");
         multa = leia.nextDouble();
 
-        System.out.println("Desconto: ");
+        System.out.print("Desconto: ");
         desconto = leia.nextDouble();
 
-        System.out.println("Total: ");
+        System.out.print("Total: ");
         total = leia.nextDouble();
 
 
@@ -63,6 +68,83 @@ public class Financeiro implements InterfaceCadastro {
         System.out.println("Total: " + total);
 
     }
+
+    public void salvarArquivo() {
+
+        try (FileOutputStream arquivo = new FileOutputStream("Financeiro.dat");
+             ObjectOutputStream obj = new ObjectOutputStream(arquivo)) {
+
+            obj.writeObject(listFinancas);
+
+            System.out.println("Lista salva com sucesso");
+
+        } catch (Exception e) {
+            // e.printStackTrace();
+            System.out.println("Erro ao salvar");
+        }
+
+    }
+
+    public void lerArquivo() {
+        try (FileInputStream arquivo = new FileInputStream("Financeiro.dat");
+             ObjectInputStream obj = new ObjectInputStream(arquivo)) {
+
+            listFinancas = (ArrayList < Financeiro >) obj.readObject();
+            obj.close();
+            arquivo.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Arquivo ainda não existe");
+        }
+    }
+
+    public void alterarFinanceiro(int id){
+
+        for (Financeiro f : listFinancas){
+
+            if (f.getId() == id){
+
+                System.out.println("Encontrado");
+
+                f.entrar();
+
+                System.out.println("Dados financeiro não encontrado");
+                return;
+            }
+        }
+
+        System.out.println("Financeiro não encontrado");
+    }
+
+    public void deletarFinanceiro(int id){
+        for (int i = 0 ; i < listFinancas.size(); i++){
+
+            if(listFinancas.get(i).getId() == id){
+                listFinancas.remove(i);
+                System.out.println("Dados removido com sucesso");
+                salvarArquivo();
+                return;
+
+            }
+
+            System.out.println("Dados financeiro não encontrado");
+        }
+
+    }
+
+    public void incluir() {
+
+        Financeiro f = new Financeiro();
+        f.entrar();
+
+        listFinancas.add(f);
+
+        salvarArquivo();
+
+    }
+
+
 
     public Financeiro(){
 

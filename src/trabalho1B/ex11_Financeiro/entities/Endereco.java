@@ -1,8 +1,9 @@
 package trabalho1B.ex11_Financeiro.entities;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Endereco {
+public class Endereco implements Serializable {
     private String logadouro;
     private String numero;
     private String complemento;
