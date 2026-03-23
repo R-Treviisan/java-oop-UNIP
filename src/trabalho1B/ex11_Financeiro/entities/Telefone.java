@@ -1,37 +1,50 @@
 package trabalho1B.ex11_Financeiro.entities;
 
-import java.io.Serializable;
-import java.util.Scanner;
+import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
 
-public class Telefone implements Serializable {
+public class Telefone implements InterfaceCadastro {
     private int ddd;
     private long numero;
 
+    public Telefone() {
+    }
+    public Telefone(int ddd, long numero) {
+        this.ddd = ddd;
+        this.numero = numero;
+    }
+
     public void entrar(){
-        Scanner leia = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("------- CADASTRO TELEFONE -------");
 
         System.out.print("DDD: ");
-        ddd = leia.nextInt();
+        this.ddd = leia.nextInt();
 
         System.out.print("Numero: ");
-        numero = leia.nextLong();
+        this.numero = leia.nextLong();
 
     }
 
     public void imprimir(){
+        leia.nextLine();
+        System.out.println("");
+        System.out.println("------- TELEFONE -------");
 
-        System.out.println("DDD: " + ddd);
-        System.out.println("Numero: " + numero);
+        System.out.println("DDD: " + this.ddd);
 
+        System.out.println("Numero: " + this.numero);
     }
 
-    public Telefone(){
+    public void alterarTelefone(){
 
-    }
+        System.out.print("Novo DDD: ");
+        this.ddd = leia.nextInt();
+        leia.nextLine();
 
-    public Telefone(int ddd, long numero) {
-        this.ddd = ddd;
-        this.numero = numero;
+        System.out.print("Novo Numero: ");
+        this.numero = leia.nextLong();
+        leia.nextLine();
+
     }
 
     public int getDdd() {
@@ -50,3 +63,4 @@ public class Telefone implements Serializable {
         this.numero = numero;
     }
 }
+

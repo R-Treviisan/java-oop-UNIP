@@ -2,12 +2,7 @@ package trabalho1B.ex11_Financeiro.entities;
 
 import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
 
-import java.io.*;
-import java.util.ArrayList;
-
 public class Financeiro implements InterfaceCadastro {
-    ArrayList <Financeiro>listFinancas = new ArrayList<>();
-
     private int id;
     private int numero;
     private String emissao;
@@ -19,58 +14,7 @@ public class Financeiro implements InterfaceCadastro {
     private double desconto;
     private double total;
 
-    public void entrar(){
-
-        System.out.print("ID: ");
-        id = leia.nextInt();
-
-        System.out.print("Numero: ");
-        numero = leia.nextInt();
-
-        System.out.print("Emissao: ");
-        emissao = leia.next();
-
-        System.out.print("Vencimento: ");
-        vencimento = leia.next();
-
-        System.out.print("Pagamento: ");
-        pagamento = leia.next();
-
-        System.out.print("Valor: ");
-        valor = leia.nextDouble();
-
-        System.out.print("Juros: ");
-        juros = leia.nextDouble();
-
-        System.out.print("Multa: ");
-        multa = leia.nextDouble();
-
-        System.out.print("Desconto: ");
-        desconto = leia.nextDouble();
-
-        System.out.print("Total: ");
-        total = leia.nextDouble();
-
-
-    }
-
-    public void imprimir(){
-
-        System.out.println("ID: " + id);
-        System.out.println("Numero: " + numero);
-        System.out.println("Emissao: " + emissao);
-        System.out.println("Vencimento: " + vencimento);
-        System.out.println("Pagamento: " + pagamento);
-        System.out.println("Valor: " + valor);
-        System.out.println("Juros: " + juros);
-        System.out.println("Multa: " + multa);
-        System.out.println("Desconto: " + desconto);
-        System.out.println("Total: " + total);
-
-    }
-
-    public Financeiro(){
-
+    public Financeiro() {
     }
 
     public Financeiro(int id, int numero, String emissao, String vencimento, String pagamento, double valor, double juros, double multa, double desconto, double total) {
@@ -84,6 +28,67 @@ public class Financeiro implements InterfaceCadastro {
         this.multa = multa;
         this.desconto = desconto;
         this.total = total;
+    }
+
+    @Override
+    public void entrar() {
+        System.out.println("-------CADASTRO FINANCEIRO-------");
+
+        System.out.print("ID: ");
+        this.id = leia.nextInt();
+
+        System.out.print("Numero: ");
+        this.numero = leia.nextInt();
+        leia.nextLine();
+
+        System.out.print("Emissão: ");
+        this.emissao = leia.nextLine();
+
+        System.out.print("Vencimento: ");
+        this.vencimento = leia.nextLine();
+
+        System.out.print("Valor: ");
+        this.valor = leia.nextDouble();
+
+        System.out.print("Juros: ");
+        this.juros = leia.nextDouble();
+
+        System.out.print("Multa: ");
+        this.multa = leia.nextDouble();
+
+        System.out.print("Desconto: ");
+        this.desconto = leia.nextDouble();
+
+    }
+
+    @Override
+    public void imprimir() {
+
+        System.out.println("ID: " + this.id);
+        System.out.println("Numero: " + this.numero);
+        System.out.println("Emissão: " + this.emissao);
+        System.out.println("Vencimento: " + this.vencimento);
+        System.out.println("Valor: " + this.valor);
+        System.out.println("Juros: " + this.juros);
+        System.out.println("Multa: " + this.multa);
+        System.out.println("Valor Total: " + this.total);
+
+    }
+
+    public void alterarValores() {
+        System.out.print("Novo valor: ");
+        this.setValor(leia.nextDouble());
+
+        System.out.print("Novo juros: ");
+        this.setJuros(leia.nextDouble());
+
+        System.out.print("Nova multa: ");
+        this.setMulta(leia.nextDouble());
+
+        System.out.print("Novo desconto: ");
+        this.setDesconto(leia.nextDouble());
+
+        this.setTotal(0);
     }
 
     public int getId() {
@@ -160,6 +165,10 @@ public class Financeiro implements InterfaceCadastro {
 
     public double getTotal() {
         return total;
+    }
+
+    public void calcularTotal() {
+        this.total = (valor + multa + juros) - desconto;
     }
 
     public void setTotal(double total) {

@@ -2,9 +2,6 @@ package trabalho1B.ex11_Financeiro.entities;
 
 import trabalho1B.ex11_Financeiro.interfaces.InterfaceCadastro;
 
-import java.io.Serializable;
-import java.util.Scanner;
-
 public class Endereco implements InterfaceCadastro {
     private String logadouro;
     private String numero;
@@ -12,53 +9,14 @@ public class Endereco implements InterfaceCadastro {
     private String bairro;
     private String cidade;
     private String estado;
-    private int cep; // PERGUNTAR SE POSSO TROCAR PARA STRING
-
-    @Override
-    public void entrar() {
-
-        System.out.print("Logadouro: ");
-        logadouro = leia.nextLine();
-
-        System.out.print("Numero: ");
-        numero = leia.nextLine();
-
-        System.out.print("Complemento: ");
-        complemento = leia.nextLine();
-
-        System.out.print("Bairro: ");
-        bairro = leia.nextLine();
-
-        System.out.print("Cidade: ");
-        cidade = leia.nextLine();
-
-        System.out.print("Estado: ");
-        estado = leia.nextLine();
-
-        System.out.print("CEP: ");
-        cep = leia.nextInt();
-        leia.nextLine();
-
-
-    }
-
-    @Override
-    public void imprimir() {
-        System.out.println("Logadouro: " + logadouro);
-        System.out.println("Numero: " + numero);
-        System.out.println("Complemento: " + complemento);
-        System.out.println("Bairro: " + bairro);
-        System.out.println("Cidade: " + cidade);
-        System.out.println("Estado: " + estado);
-        System.out.println("CEP: " + cep);
-
-    }
+    private int cep;
 
     public Endereco() {
 
     }
 
-    public Endereco(String logadouro, String numero, String complemento, String bairro, String cidade, String estado, int cep) {
+    public Endereco(String logadouro, String numero, String complemento, String bairro,
+                    String cidade, String estado, int cep) {
         this.logadouro = logadouro;
         this.numero = numero;
         this.complemento = complemento;
@@ -66,6 +24,75 @@ public class Endereco implements InterfaceCadastro {
         this.cidade = cidade;
         this.estado = estado;
         this.cep = cep;
+    }
+
+    public void entrar(){
+        System.out.println("");
+        System.out.println("----------CADASTRO ENDEREÇO----------");
+        System.out.print("Logadouro: ");
+        this.logadouro = leia.nextLine();
+
+        System.out.print("Numero: ");
+        this.numero = leia.nextLine();
+
+        System.out.print("Complemento: ");
+        this.complemento = leia.nextLine();
+
+        System.out.print("Bairro: ");
+        this.bairro = leia.nextLine();
+
+        System.out.print("CEP: ");
+        this.cep = leia.nextInt();
+        leia.nextLine();
+
+        System.out.print("Cidade: ");
+        this.cidade = leia.nextLine();
+
+        System.out.print("Estado: ");
+        this.estado = leia.nextLine();
+
+
+    }
+
+    public void imprimir(){
+        System.out.println("");
+        System.out.println("----------ENDEREÇO----------");
+
+        System.out.println("Logadouro: " + this.logadouro);
+        System.out.println("Numero: " + this.numero);
+        System.out.println("Complemento: " + this.complemento);
+        System.out.println("Bairro: " + this.bairro);
+        System.out.println("CEP: " + this.cep);
+        System.out.println("Cidade: " + this.cidade);
+        System.out.println("Estado: " + this.estado);
+
+
+
+    }
+
+    public void alterarEndereco(){
+        System.out.println("");
+        System.out.print("Novo Logadouro: ");
+        this.logadouro = leia.nextLine();
+
+        System.out.print("Novo Numero: ");
+        this.numero = leia.nextLine();
+
+        System.out.print("Novo Complemento: ");
+        this.complemento = leia.nextLine();
+
+        System.out.print("Novo Bairro: ");
+        this.bairro = leia.nextLine();
+
+        System.out.print("Novo Cidade: ");
+        this.cidade = leia.nextLine();
+
+        System.out.print("Novo Estado: ");
+        this.estado = leia.nextLine();
+
+        System.out.print("Novo CEP: ");
+        this.cep = leia.nextInt();
+
     }
 
     public String getLogadouro() {
