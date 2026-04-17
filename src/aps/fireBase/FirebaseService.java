@@ -31,12 +31,26 @@ public class FirebaseService {
 
                 if (dados.length >= 6) {
 
-                    String nome = dados[3];
+                    String faunaFlora = dados[0];
+                    String grupo = dados[1];
+                    String familia = dados[2];
+                    String especie = dados[3];
+                    String nomeComum = dados[4];
                     String categoria = dados[5];
+                    String bioma = dados.length > 6 ? dados[6] : "";
+                    String ameacas = dados.length > 7 ? dados[7] : "";
+                    String estados = dados.length > 8 ? dados[8] : "";
 
                     String jsonLinha = "{"
-                            + "\"nome\":\"" + nome + "\","
-                            + "\"categoria\":\"" + categoria + "\""
+                            + "\"faunaFlora\":\"" + faunaFlora + "\","
+                            + "\"grupo\":\"" + grupo + "\","
+                            + "\"familia\":\"" + familia + "\","
+                            + "\"especie\":\"" + especie + "\","
+                            + "\"nomeComum\":\"" + nomeComum + "\","
+                            + "\"categoria\":\"" + categoria + "\","
+                            + "\"bioma\":\"" + bioma + "\","
+                            + "\"ameacas\":\"" + ameacas + "\","
+                            + "\"estados\":\"" + estados + "\""
                             + "}";
 
                     jsonFinal += "\"" + i + "\":" + jsonLinha + ",";
