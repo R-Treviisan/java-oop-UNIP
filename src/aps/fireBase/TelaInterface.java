@@ -29,7 +29,7 @@ public class TelaInterface extends JFrame {
 
         setTitle("APS - Espécies");
 
-        setSize(800, 800); //largura - altura
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
